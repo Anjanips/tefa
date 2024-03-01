@@ -9,41 +9,54 @@
         <div class="row">
           <div class="col-lg-2">
             <div class="card mb-3">
-              <div class="card-body">
+              <nuxt-link to="/buku/buku1">
+                <div class="card-body">
                 <img src="~/assets/img/cover.jpg" class="cover" alt="cover 1">
               </div>
+              </nuxt-link>
             </div>
           </div>
           <div class="col-lg-2">
             <div class="card mb-3">
-              <div class="card-body">
+              <nuxt-link to="/buku/buku2">
+                <div class="card-body">
                 <img src="~/assets/img/cover2.jpeg" class="cover" alt="cover 2">
-              </div>
+                </div>
+              </nuxt-link>
             </div>
           </div>
           <div class="col-lg-2">
             <div class="card mb-3">
-              <div class="card-body">
-                <img src="~/assets/img/cover3.jpg" class="cover" alt="cover 3">
-              </div>
+              <nuxt-link to="/buku/buku3">
+                <div class="card-body">
+                  <img src="~/assets/img/cover3.jpg" class="cover" alt="cover 3">
+                </div>
+              </nuxt-link>
             </div>
           </div>
           <div class="col-lg-2">
             <div class="card mb-3">
-              <div class="card-body">
-                <img src="~/assets/img/cover4.jpg" class="cover" alt="cover 4">
-              </div>
+              <nuxt-link to="/buku/buku4">
+                <div class="card-body">
+                  <img src="~/assets/img/cover4.jpg" class="cover" alt="cover 4">
+                </div>
+              </nuxt-link>
             </div>
           </div>
           <div class="col-lg-2">
             <div class="card mb-3">
-              <div class="card-body">
-                <img src="~/assets/img/cover5.jpg" class="cover" alt="cover 5">
-              </div>
+              <nuxt-link to="/buku/buku5">
+                <div class="card-body">
+                  <img src="~/assets/img/cover5.jpg" class="cover" alt="cover 5">
+                </div>
+              </nuxt-link>
             </div>
           </div>
         </div>
       </div>
+      <nuxt-link to="../">
+          <button type="button" class="btn btn-secondary btn-lg rounded-5 px-5" style="margin-left: 90.5%;">KEMBALI</button>
+        </nuxt-link>
     </div>
   </div>
 </template>

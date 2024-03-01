@@ -31,10 +31,12 @@
                   <option value="pinjam">Pinjam Buku</option>
                   <option value="kembalikan">Kembalikan Buku</option>
             </select>
-           </div> 
-           <button type="submit" class="btn btn-primary btn-lg rounded-5 px-5">KIRIM</button>
+           </div>
+           <nuxt-link to="../pengunjung"><button type="submit" class="btn btn-primary btn-lg rounded-5 px-5">KIRIM</button></nuxt-link>
+           <nuxt-link to="../"><button type="button" class="btn btn-secondary btn-lg rounded-5 px-5" style="margin-left: 82.5%;">KEMBALI</button></nuxt-link>
         </form>
       </div>
     </div>
   </div>
 </template>
+
