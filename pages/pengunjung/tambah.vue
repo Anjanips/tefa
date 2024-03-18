@@ -40,3 +40,37 @@
   </div>
 </template>
 
+<script setup>
+const supabase = useSupabaseClient()
+
+const members = ref([])
+const objectives = ref ([])
+
+const form = ref ({
+  nama: "",
+  kategori: "",
+  kelas: "",
+  keperluan: "",
+})
+
+const kirimData = async () => {
+  const {error} = await supabase.from('pengunjung').insert([form.value])
+  if(!error) navigateTo('/pengunjung')
+}
+
+const getKategori = async () => {
+  const { data, error } = await supabase.from('kategori').select('*')
+  if(data) members.value = data
+}
+
+const getKeperluan = async () => {
+  const { data, error } = await supabase.from('keperluan').select('*')
+  if(data) members.value = data
+}
+
+onMounted(() => {
+  getKategori()
+  getKeperluan()
+})
+
+</script>

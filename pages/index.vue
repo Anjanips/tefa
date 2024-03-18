@@ -5,7 +5,7 @@
         <nuxt-link to="/pengunjung/tambah">
           <div class="card bg-pengunjung rounded-5">
             <div class="card-body">
-              <h2 style="font-family: ;">Pengunjung</h2>
+              <h2 style="font-family: ">Pengunjung</h2>
             </div>
           </div>
         </nuxt-link>
@@ -14,21 +14,21 @@
         <nuxt-link to="/buku">
           <div class="card bg-buku rounded-5">
             <div class="card-body">
-              <h2 style="font-family: ;">Cari Buku</h2>
+              <h2 style="font-family: ">Cari Buku</h2>
             </div>
           </div>
         </nuxt-link>
       </div>
       </div>
 
-      <h2 class="mt-5" style="font-family: ; margin-left: 150px;">STATISTIK</h2>
+      <h2 class="mt-5" style="margin-left: 150px;">STATISTIK</h2>
       <div class="row my-5 justify-content-around">
         <div class="col-lg-5">
           <div class="card bg-spengunjung rounded-5">
             <div class="card-body">
               <div class="row">
                 <div class="col p-5"><h1 style="font-size: 120px;">5</h1></div>
-                <div class="col mt-5 p-5"><h2 style="font-family: ; margin-right: 200px;">Pengunjung</h2></div>
+                <div class="col mt-5 p-5"><h2 style="margin-right: 200px;">Pengunjung</h2></div>
               </div>
             </div>
           </div>
@@ -39,13 +39,16 @@
             <div class="card-body">
               <div class="row">
                 <div class="col p-5"><h1 style="font-size: 120px; margin-right: 200px">50</h1></div>
-                <div class="col mt-5 p-5"><h2 style="font-family: ;">Buku</h2></div>
+                <div class="col mt-5 p-5"><h2 style="font-family: ">Buku</h2></div>
               </div>
             </div>
           </div>
         </div>
       </div>
   </div>
+    <div>
+      <Chart />
+    </div>
 </template>
 
 
