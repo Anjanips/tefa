@@ -28,12 +28,12 @@
                   <option v-for="(item, i) in objectives" :key="i" :value="item.id">{{ item.nama }}</option>
                   
             </select>
-           </div>
-           <div class="row">
+            </div>
+            <div class="row">
             <div class="col-8">
               <button type="submit" class="btn btn-primary btn-lg rounded-5 px-5">KIRIM</button></div>
             <div class="col-2"><nuxt-link to=".."><button type="button" class="btn btn-secondary btn-lg rounded-5 px-5" style="margin-left: 80.2%;">KEMBALI</button></nuxt-link></div>
-           </div>
+            </div>
         </form>
       </div>
     </div>

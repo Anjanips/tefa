@@ -18,42 +18,6 @@
               </nuxt-link>
             </div>
           </div>
-          <div v-for="(book, i) in books" :key="i" class="col-lg-2">
-            <div class="card mb-3">
-              <nuxt-link to="/buku/buku2">
-                <div class="card-body">
-                <img src="~/assets/img/cover2.jpeg" class="cover" alt="cover 2">
-                </div>
-              </nuxt-link>
-            </div>
-          </div>
-          <div v-for="(book, i) in books" :key="i" class="col-lg-2">
-            <div class="card mb-3">
-              <nuxt-link to="/buku/buku3">
-                <div class="card-body">
-                  <img src="~/assets/img/cover3.jpg" class="cover" alt="cover 3">
-                </div>
-              </nuxt-link>
-            </div>
-          </div>
-          <div v-for="(book, i) in books" :key="i" class="col-lg-2">
-            <div class="card mb-3">
-              <nuxt-link to="/buku/buku4">
-                <div class="card-body">
-                  <img src="~/assets/img/cover4.jpg" class="cover" alt="cover 4">
-                </div>
-              </nuxt-link>
-            </div>
-          </div>
-          <div v-for="(book, i) in books" :key="i" class="col-lg-2">
-            <div class="card mb-3">
-              <nuxt-link to="/buku/buku5">
-                <div class="card-body">
-                  <img src="~/assets/img/cover5.jpg" class="cover" alt="cover 5">
-                </div>
-              </nuxt-link>
-            </div>
-          </div>
         </div>
       </div>
       <nuxt-link to="../">
@@ -70,9 +34,9 @@ const books = ref([])
 const keyword = ref('')
 
 const getBooks = async () => {
-  const { data, error } = await supabase.from('buku').select(`*, kategori(*)`)
+  const { data, error } = await supabase.from('buku').select(`*, kategori_buku(*)`)
   .ilike('judul', `%${keyword.value}%`)
-  if(data) books.value = data
+  if(data) console.log(data)
 
   onMounted(() => {
     getBooks()
