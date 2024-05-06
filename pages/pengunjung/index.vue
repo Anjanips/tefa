@@ -6,7 +6,7 @@
         <div class="my-3">
           <input type="search" class="form-control form-control-lg rounded-5" placeholder="Filter...">
         </div>
-        <div class="my-3 text-muted">Menampilkan 3 dari 3</div>
+        <div class="my-3 text-muted">Menampilkan {{ visitors.length }} dari {{ jumlah }}</div>
         <table class="table">
           <thead>
             <tr>
@@ -27,7 +27,7 @@
           </tr>
           </tbody>
         </table>
-        <nuxt-link to="./pengunjung/tambah">
+        <nuxt-link to="./">
           <button type="submit" class="btn btn-secondary btn-lg rounded-5 px-5" style="margin-left: 80.5%;">KEMBALI</button>
         </nuxt-link>
       </div>
@@ -45,7 +45,14 @@ const getPengunjung = async () => {
   if(data) visitors.value = data
 }
 
+const totalPengunjung = async () => {
+  const { data, count } = await supabase.from('pengunjung')
+  .select("*", { count: 'exact' })
+  if (data) jumlah.value = count
+}
+
 onMounted(() => {
   getPengunjung()
+  totalPengunjung()
 })
 </script>

@@ -11,9 +11,9 @@
         <div class="row">
           <div v-for="(book, i) in books" :key="i" class="col-lg-2">
             <div class="card mb-3">
-              <nuxt-link to="/buku/buku1">
+              <nuxt-link :to="`/buku/${book.id}`">
                 <div class="card-body">
-                <img src="~/assets/img/cover.jpg" class="cover" alt="cover 1">
+                <img :src="book.cover" class="cover" alt="cover 1">
               </div>
               </nuxt-link>
             </div>
@@ -36,12 +36,12 @@ const keyword = ref('')
 const getBooks = async () => {
   const { data, error } = await supabase.from('buku').select(`*, kategori_buku(*)`)
   .ilike('judul', `%${keyword.value}%`)
-  if(data) console.log(data)
+  if(data) books.value = data
+}
 
   onMounted(() => {
     getBooks()
   })
-}
 </script>
 
 <style scoped>
