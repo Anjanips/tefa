@@ -14,7 +14,8 @@
               </option>
             </select>
           </div>
-              <div class="mb-3">
+          <div class="mb-3" v-if="form.keanggotaan == '1'">
+            <div class="mb-3">
                 <select v-model="form.kelas" class="form-control form-control-lg form-select rounded-5">
                   <option value="">KELAS</option>
                   <option value="X">X</option>
@@ -22,6 +23,8 @@
                   <option value="XII">XII</option>
                 </select>
               </div>
+          </div>
+              
             <div class="mb-3">
             <select v-model="form.keperluan" class="form-control form-control-lg form-select rounded-5">
               <option value="">KEPERLUAN</option>

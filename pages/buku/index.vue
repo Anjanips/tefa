@@ -47,7 +47,7 @@ const getBooks = async () => {
 <style scoped>
 .card-body {
   width: 100%;
-  /* height: 20em; */
+  height: 400px;
   padding: 0;
 }
 .cover {

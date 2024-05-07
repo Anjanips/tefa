@@ -28,7 +28,7 @@
             <div class="card-body">
               <nuxt-link to="/pengunjung">
                 <div class="row">
-                <div class="col p-5"><h1 style="font-size: 120px;">11</h1></div>
+                <div class="col p-5"><h1 style="font-size: 120px;">{{ jumlahp }}</h1></div>
                 <div class="col mt-5 p-5"><h2 style="margin-right: 200px;">Pengunjung</h2></div>
               </div>
               </nuxt-link>
@@ -41,7 +41,7 @@
             <div class="card-body">
               <nuxt-link to="./buku">
                 <div class="row">
-                <div class="col p-5"><h1 style="font-size: 120px; margin-right: 200px">5</h1></div>
+                <div class="col p-5"><h1 style="font-size: 120px; margin-right: 200px">{{ jumlahb }}</h1></div>
                 <div class="col mt-5 p-5"><h2 style="font-family: ">Buku</h2></div>
               </div>
               </nuxt-link>
@@ -54,6 +54,36 @@
       <Chart />
     </div>
 </template>
+
+<script setup>
+
+const supabase = useSupabaseClient();
+const jumlahp = ref(0);
+const jumlahb = ref(0);
+
+
+async function ambiljumlahp () {
+  const { data, error, count } = await supabase
+    .from("pengunjung")
+    .select("*", {count: "exact"});
+  if (count) jumlahp.value = count;
+};
+
+async function ambiljumlahb () {
+  const { data, error, count } = await supabase
+    .from("buku")
+    .select("*", {count: "exact"});
+  if (count) jumlahb.value = count;
+};
+
+onMounted(() => {
+  ambiljumlahp();
+  ambiljumlahb();
+});
+</script>
+
+
+
 
 
 <style scoped>

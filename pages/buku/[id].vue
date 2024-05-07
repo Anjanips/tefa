@@ -2,7 +2,7 @@
   <h2 class="text-start my-4">{{ buku.judul }}</h2>
     <div class="row">
       <div class="col-md-3">
-        <img :src="buku.cover" class="cover" alt="cover buku">
+        <img :src="buku.cover" class="cover" alt="cover buku" style="height: 400px;">
       </div>
     <div class="col-md-6">
       <div class="badge bg-primary p-2">{{ buku.kategori }}</div>
@@ -13,7 +13,11 @@
       <li class="list-group-item">{{ buku.deskripsi }}</li>
     </ul>
   </div>
+  <nuxt-link to="./">
+          <button type="button" class="btn btn-secondary btn-lg rounded-5 px-5" style="margin-left: 90.5%;">KEMBALI</button>
+        </nuxt-link>
   </div>
+
 </template>
 
 
@@ -32,6 +36,6 @@ const getBooksById = async () => {
 } 
 
 onMounted(() => {
-  getBooksById
+  getBooksById()
 })
 </script>
