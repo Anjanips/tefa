@@ -13,7 +13,7 @@ const labels = [
   const data = {
     labels: labels,
     datasets: [{
-      label: 'My First dataset',
+      label: 'Pengunjung',
       backgroundColor: 'rgb(211, 211, 211)',
       borderColor: 'rgb(255, 99, 132)',
       data: [13, 19, 22, 17, 18, 20, 30, 35],
