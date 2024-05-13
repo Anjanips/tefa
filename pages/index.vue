@@ -10,6 +10,7 @@
           </div>
         </nuxt-link>
       </div>
+      
       <div class="col-lg-5"> 
         <nuxt-link to="/buku">
           <div class="card bg-buku rounded-5">

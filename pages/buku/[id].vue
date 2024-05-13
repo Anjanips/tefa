@@ -5,12 +5,15 @@
         <img :src="buku.cover" class="cover" alt="cover buku" style="height: 400px;">
       </div>
     <div class="col-md-6">
-      <div class="badge bg-primary p-2">{{ buku.kategori }}</div>
     <ul class="list-group list-grup-flush">
       <li class="list-group-item">Penulis: {{ buku.penulis }}</li>
       <li class="list-group-item">Penerbit: {{ buku.penerbit }}</li>
       <li class="list-group-item">Tahun Terbit: {{ buku.tahun_terbit }}</li>
       <li class="list-group-item">{{ buku.deskripsi }}</li>
+      <li class="list-group-item">
+          <span v-if="buku.kategori"> Kategori : {{ buku.kategori.nama }}</span>
+          <span v-else>loading...</span>
+      </li>
     </ul>
   </div>
   <nuxt-link to="./">
@@ -26,7 +29,6 @@
 const supabase = useSupabaseClient()
 
 const route = useRoute()
-
 const buku = ref([])
 
 const getBooksById = async () => {
