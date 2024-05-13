@@ -6,9 +6,9 @@
       </div>
     <div class="col-md-6">
     <ul class="list-group list-grup-flush">
-      <li class="list-group-item">Penulis: {{ buku.penulis }}</li>
-      <li class="list-group-item">Penerbit: {{ buku.penerbit }}</li>
-      <li class="list-group-item">Tahun Terbit: {{ buku.tahun_terbit }}</li>
+      <li class="list-group-item">Penulis : {{ buku.penulis }}</li>
+      <li class="list-group-item">Penerbit : {{ buku.penerbit }}</li>
+      <li class="list-group-item">Tahun Terbit : {{ buku.tahun_terbit }}</li>
       <li class="list-group-item">{{ buku.deskripsi }}</li>
       <li class="list-group-item">
           <span v-if="buku.kategori"> Kategori : {{ buku.kategori.nama }}</span>
