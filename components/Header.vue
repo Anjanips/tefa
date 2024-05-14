@@ -1,7 +1,7 @@
 <template>
   <div class="row p-3 bg-primary text-white">
     <div class="col-lg-1">
-      <img src="~assets/img/logo smk.png" alt="logo SMK4">
+      <img src="~assets/img/logo smk.webp" alt="logo SMK4">
     </div>
 
     <div class="col-lg-11">
