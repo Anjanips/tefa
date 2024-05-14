@@ -26,7 +26,7 @@
       <div class="row my-5 justify-content-around">
         <div class="col-lg-5">
           <div class="card bg-spengunjung rounded-5">
-            <div class="card-body">
+            <div class="card-body text">
               <nuxt-link to="/pengunjung">
                 <div class="row">
                 <div class="col p-5"><h1 style="font-size: 120px;">{{ jumlahp }}</h1></div>
@@ -39,7 +39,7 @@
 
       <div class="col-lg-5">
           <div class="card bg-sbuku rounded-5">
-            <div class="card-body">
+            <div class="card-body text">
               <nuxt-link to="./buku">
                 <div class="row">
                 <div class="col p-5"><h1 style="font-size: 120px; margin-right: 200px">{{ jumlahb }}</h1></div>
@@ -119,5 +119,10 @@ onMounted(() => {
   background-position: center center;
   background-size: cover;
   opacity: 60%;
+}
+
+.text {
+  display: flex;
+  
 }
 </style>
