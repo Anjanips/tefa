@@ -26,6 +26,7 @@
 
 
 <script setup>
+useHead({ title: "perpus digital anjani", meta: [{ name: "description", content: "ayo baca buku"}]})
 const supabase = useSupabaseClient()
 
 const route = useRoute()

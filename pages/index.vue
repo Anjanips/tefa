@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-
+useHead({ title: "perpus digital anjani", meta: [{ name: "description", content: "aplikasi kunjungan dan pencarian buku perpus SMKN 4 Tasikmalaya"}]})
 const supabase = useSupabaseClient();
 const jumlahp = ref(0);
 const jumlahb = ref(0);
@@ -123,6 +123,6 @@ onMounted(() => {
 
 .text {
   display: flex;
-  
+
 }
 </style>

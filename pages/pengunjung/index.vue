@@ -38,6 +38,7 @@
 </template>
 
 <script setup>
+useHead({ title: "pengunjung" });
 const supabase = useSupabaseClient()
 const keyword = ref("")
 const visitors = ref ([])

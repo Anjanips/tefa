@@ -28,6 +28,7 @@
 </template>
 
 <script setup>
+useHead({ title: "detail buku" });
 const supabase = useSupabaseClient()
 
 const books = ref([])
