@@ -26,11 +26,12 @@
 
 
 <script setup>
-useHead({ title: "perpus digital anjani", meta: [{ name: "description", content: "ayo baca buku"}]})
 const supabase = useSupabaseClient()
 
 const route = useRoute()
 const buku = ref([])
+useHead({ title: "detail buku", 
+meta: [{ name: "description", content: "detail buku"}]})
 
 const getBooksById = async () => {
   const { data, error } = await supabase.from('buku').select(`*, kategori(*)`)

@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-useHead({ title: "pengunjung" });
+useHead({ title: "pengunjung perpus" });
 const supabase = useSupabaseClient()
 const keyword = ref("")
 const visitors = ref ([])
