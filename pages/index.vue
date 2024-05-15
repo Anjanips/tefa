@@ -99,7 +99,6 @@ onMounted(() => {
   background-position: center center;
   background-size: cover;
   opacity: 60%;
-  margin-top: 10px;
 }
 .card.bg-buku { 
   background-image: url('../assets/img/bg-home-cari-buku.jpg');
@@ -107,7 +106,6 @@ onMounted(() => {
   background-position: center center;
   background-size: cover;
   opacity: 60%;
-  margin-top: 10px;
 }
 .card.bg-spengunjung { 
   background-color: #ECEE7F;
