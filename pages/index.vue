@@ -91,7 +91,7 @@ onMounted(() => {
 .card {
   height: 250px;
   box-shadow: 1px 1px 10px #424242;
-  margin-top: 10 px;
+  margin-top: 10px;
 }
 .card.bg-pengunjung { 
   background-image: url('../assets/img/home-kunjungan.jpeg');
